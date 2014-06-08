@@ -1,4 +1,4 @@
-source 'http://rubygems.nordstrom.net'
+source 'http://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
