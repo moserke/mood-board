@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :mood
 
-  root 'mood#index'
+  resources :board
+
+  root 'board#index'
 end

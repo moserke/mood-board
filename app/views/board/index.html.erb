@@ -1,0 +1,7 @@
+<% @people.each do |person| %>
+  <%= link_to(
+        image_tag(person.image_url,
+        style: "top:#{728 - person.top}px;left:#{person.left}px"),
+        edit_mood_path(person)
+      )%>
+<% end %>

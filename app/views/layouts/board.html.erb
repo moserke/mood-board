@@ -3,9 +3,7 @@
 <head>
   <title>Mood</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <% if current_page?(:controller => 'mood', :action => 'index') %>
   <%= stylesheet_link_tag    'board', media: 'all', 'data-turbolinks-track' => true %>
-  <% end %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>

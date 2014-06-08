@@ -1,6 +1,4 @@
 class MoodController < ApplicationController
-  layout 'mood'
-
   def index
     @people = Person.all
   end
@@ -47,7 +45,7 @@ class MoodController < ApplicationController
     @person.left = form_data[:left]
 
     if @person.save
-      redirect_to url_for controller: 'mood'
+      redirect_to url_for controller: 'board'
     else
       render 'edit'
     end
