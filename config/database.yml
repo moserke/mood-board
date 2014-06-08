@@ -21,7 +21,5 @@ test:
   database: db/test.sqlite3
 
 production:
-  adapter: postgresql
-  host: localhost
-  username: user
-  database: app-dev
+  <<: *default
+  database: db/production.sqlite3
