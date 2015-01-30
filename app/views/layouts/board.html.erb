@@ -2,15 +2,26 @@
 <html>
 <head>
   <title>Mood</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'board', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= stylesheet_link_tag    'board', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <meta http-equiv='refresh' content='300'>
 </head>
 <body>
 
-<%= yield %>
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><%= link_to('Board', moods_path) %></li>
+  <li role="presentation"><%= link_to('Users', users_path) %></li>
+</ul>
+
+<table>
+  <tr>
+    <td id="board">
+      <%= yield %>
+    </td>
+  </tr>
+</table>
 
 </body>
 </html>

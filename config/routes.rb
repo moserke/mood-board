@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  resources :mood
+  resources :moods, param: :slug, only: [:index]
 
-  resources :board
+  resources :users, param: :slug do
+    resources :moods, only: [:show, :edit, :create]
+  end
 
-  root 'board#index'
+  root 'moods#index'
 end

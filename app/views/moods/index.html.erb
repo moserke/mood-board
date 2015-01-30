@@ -1,0 +1,13 @@
+<% @moods.each do |mood| %>
+  <%= link_to(
+        image_tag(
+          mood.user.image_url,
+          style: "top:#{mood.top}px;left:#{mood.left}px",
+          alt: mood.user.full_name,
+          title: mood.user.full_name,
+          id: mood.user.slug,
+          class: 'img-small img-rounded'
+        ),
+        user_path(mood.user)
+      )%>
+<% end %>

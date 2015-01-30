@@ -1,0 +1,25 @@
+Documentation:
+  Enabled: false
+
+CyclomaticComplexity:
+  Enabled: false
+
+MethodLength:
+  Enabled: false
+
+LineLength:
+  Max: 128
+
+ClassVars:
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - bin/*
+    - db/schema.rb
+
+SignalException:
+  Enabled: false
+
+GlobalVars:
+  Enabled: false

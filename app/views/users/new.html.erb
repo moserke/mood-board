@@ -1,0 +1,49 @@
+<div class="panel panel-default" style="width: 450px">
+  <div class="panel-heading text-center">
+    <h3 class="panel-title">New User</h3>
+  </div>
+  <div class="panel-body">
+    <%= form_for(@user, html: { class: 'form-horizontal' }) do |user| %>
+      <div class="form-group">
+        <label for="first-name" class="col-sm-3 control-label">First Name</label>
+        <div class="col-sm-9">
+          <%=
+            user.text_field(
+              :first_name,
+              size: 30,
+              id: 'first-name',
+              class: 'form-control'
+            )
+          %>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="last-name" class="col-sm-3 control-label">Last Name</label>
+        <div class="col-sm-9">
+          <%=
+            user.text_field(
+              :last_name,
+              size: 30,
+              id: 'last-name',
+              class: 'form-control'
+            )
+          %>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email" class="col-sm-3 control-label">Email</label>
+        <div class="col-sm-9">
+          <%=
+            user.text_field(
+              :email,
+              size: 30,
+              id: 'email',
+              class: 'form-control'
+            )
+          %>
+        </div>
+      </div>
+      <%= user.submit('Create', class: 'btn btn-success') %>
+    <% end %>
+  </div>
+</div>
