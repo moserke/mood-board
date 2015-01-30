@@ -34,7 +34,7 @@ class UsersController < ApplicationController
 
     user.save!
 
-    user.moods.create(top: 10, left: 10)
+    user.moods.create(top: 52, left: 10)
 
     redirect_to(edit_user_path(user))
   end
