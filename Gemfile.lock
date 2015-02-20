@@ -1,5 +1,5 @@
 GEM
-  remote: http://rubygems.nordstrom.net/
+  remote: http://rubygems.org/
   specs:
     actionmailer (4.1.1)
       actionpack (= 4.1.1)
