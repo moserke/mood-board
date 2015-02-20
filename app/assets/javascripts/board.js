@@ -13,7 +13,10 @@ $(function () {
         "top":$(this).position().top.toString(),
         "left":$(this).position().left.toString()
       };
- 
+
+      // Update border color to green
+      $(this).removeClass("green orange red").addClass("green")
+
       $.ajax({
         context: this,
         type:"POST",

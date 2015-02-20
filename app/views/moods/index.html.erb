@@ -6,7 +6,7 @@
           alt: mood.user.full_name,
           title: mood.user.full_name,
           id: mood.user.slug,
-          class: 'img-small img-rounded'
+          class: "img-small img-rounded border #{mood.color}"
         ),
         user_path(mood.user)
       )%>
