@@ -27,13 +27,13 @@
         </div>
         <ul class="list-group">
           <li class="list-group-item">
-            <h4><span class="label green">Updated in last two hours</span></h4>
+            <h4><span class="label green">Updated in the last <%= ENV['fresh'] %> hours</span></h4>
           </li>
           <li class="list-group-item">
-            <h4><span class="label orange">Updated in last six hours</span></h4>
+            <h4><span class="label orange">Updated in the last <%= ENV['old'] %> hours</span></h4>
           </li>
           <li class="list-group-item">
-            <h4><span class="label red">Updated over six hours ago</span></h4>
+            <h4><span class="label red">Updated over <%= ENV['old'] %> hours ago</span></h4>
           </li>
         </ul>
       </div>
