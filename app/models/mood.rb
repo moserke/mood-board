@@ -5,8 +5,8 @@ class Mood < ActiveRecord::Base
   validates(:left, presence: true)
 
   def color
-    return 'green' if created_at > 2.hours.ago
-    return 'orange' if created_at > 6.hours.ago
+    return 'green' if created_at > ENV['fresh'].to_i.hours.ago
+    return 'orange' if created_at > ENV['old'].to_i.hours.ago
     'red'
   end
 end
